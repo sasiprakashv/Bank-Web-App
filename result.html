@@ -1,0 +1,21 @@
+
+<html>
+    <style>
+        body{
+             font-size: 20;
+             margin-left:100px;
+        }
+    </style>
+<body bgcolor="cyan">
+    <center><h1>Customers in this bank management system, list are:</h1></center><br>
+
+{% for i in data %}
+<h3>Customer number is :{{i.customer_no}}</h3>
+{{i.Name}}<br>
+{{i.Email}}<br>
+{{i.Amount}}<br>
+{%  endfor %}
+<center><a href="{% url 'fun' %}">Return to Home Page...</a></center>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<html>
+    <style>
+        body{
+            font-size: 20;
+            margin-top: 100px;
+            
+       }
+       p{
+        margin-top: 60px;
+           margin-left: 600;
+       }
+    </style>
+<body bgcolor="cyan">
+  <form method="POST" action="{% url 'receiver' %}">
+    {% csrf_token %} 
+
+    <center><h2>To make transaction enter the Amount and customer number:</h2></center>
+   <p>
+    Enter Amount   :<input type="number" name="tamount"><br><br>
+    Customer Number:<input type="number" name="cnumber"><br><br>
+    User   Number  :<input type="number" name="unumber"><br><br>
+    </p>
+    <center><input type="submit"></center>
+  </form>  
+</body>
+</html>

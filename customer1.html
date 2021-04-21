@@ -1,0 +1,35 @@
+<html>
+   <head>
+    <title>customer  details</title>
+   </head> 
+ <style>
+     p{
+         font-size: 20;
+     }
+     body{
+        
+        margin-left:100px;
+        margin-top:75px;
+     }
+     p1{
+        margin-left:400px;
+     }
+     p2{
+        margin-left:400px;
+     }
+ </style>
+<body bgcolor="cyan">
+   <form method="POST">
+    {% csrf_token %}
+    <h1>Customer {{customer_no}} details is given below:</h1><br>
+    <p>Name    : {{Name}}<br>
+    Email     :{{Email}}<br>
+    Amount:{{Amount}}<br><br><br>
+    If you want to perform transaction, then click the below link:<br>
+    <p2><a href="{% url 'transaction'  %} ">click here</a></p2><br>
+    Else you want to return home page,click the link:<br>
+    <p1><a href="{% url 'fun' %}">Return to home page...</a></p1>
+   </form>
+</p>
+</body>
+</html>

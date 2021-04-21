@@ -1,0 +1,33 @@
+<html>
+<style>
+    p{
+        font-size: 15;
+    }
+    h{
+        margin-left:100px;
+    }
+    body{
+        margin-left:100px;
+        margin-top:75px;
+    }
+</style>
+<body bgcolor="cyan">
+    <center><h2>All the customer in this Bank Management System are:</h2></center><br>
+   <p>{% for i in data %}
+    <h3>{{i.customer_no}} .
+        {{i.Name}}<br>
+        {% if i.customer_no == 1 %}
+          <h><a href=" {% url 'customer1' %} ">click to view details</a></h3></h>
+        {% elif i.customer_no == 2 %}
+          <h><a href=" {% url 'customer2' %} ">click to view details</a></h3></h>
+        {% elif i.customer_no == 3 %}
+          <h><a href=" {% url 'customer3' %} ">click to view details</a></h3></h>
+        {% elif i.customer_no == 4 %}
+          <h><a href=" {% url 'customer4' %} ">click to view details</a></h3></h>
+        {% elif i.customer_no == 5 %}
+          <h><a href=" {% url 'customer5' %} ">click to view details</a></h3></h>    
+        {% endif %}
+    {% endfor %}
+</p> 
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bank Management System</title>
+</head>
+<style>
+body {
+        font-size: 30;
+
+     }
+p 
+     {
+          margin-top:75px;
+		  margin-left:490px;
+          width:600px;
+          
+          padding: 10px;
+      }
+h5
+{
+      font-size: larger;
+}
+</style>
+<body bgcolor="cyan">
+
+      <center><h1>Bank Management System</h1></center>
+      <p>
+            The bank management system is an application for maintaining a personal account in a bank.<br>
+            This system provides the access to the customers details and their money transfer details.,<br>
+            And also we can see their details, also to view reports of all accounts present.<br><br>
+            Now click the below link to view the customer details....
+      </p>
+
+     <center> <a href="{% url 'res1' %}"><h5>click here to view no of customer</h5></a></center>
+     <center> <a href="{% url 'res' %}"><h5>click here to view all customer details</h5></a></center>
+
+</body>
+</html>
+
